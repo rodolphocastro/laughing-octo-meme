@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todoer.Api", "Todoer.Api\Todoer.Api.csproj", "{EAF9E710-8E15-4BA3-A5F8-5FA28A2561CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todoer.Tests", "Todoer.Tests\Todoer.Tests.csproj", "{43868390-65FA-41D8-95C7-EBE977E3957A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{EAF9E710-8E15-4BA3-A5F8-5FA28A2561CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAF9E710-8E15-4BA3-A5F8-5FA28A2561CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAF9E710-8E15-4BA3-A5F8-5FA28A2561CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43868390-65FA-41D8-95C7-EBE977E3957A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43868390-65FA-41D8-95C7-EBE977E3957A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43868390-65FA-41D8-95C7-EBE977E3957A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43868390-65FA-41D8-95C7-EBE977E3957A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
