@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todoer.Api", "Todoer.Api\To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todoer.Tests", "Todoer.Tests\Todoer.Tests.csproj", "{43868390-65FA-41D8-95C7-EBE977E3957A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todoer.Spec", "Todoer.Spec\Todoer.Spec.csproj", "{CDB8DAAC-5479-4659-8303-10F7F138D067}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{43868390-65FA-41D8-95C7-EBE977E3957A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43868390-65FA-41D8-95C7-EBE977E3957A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43868390-65FA-41D8-95C7-EBE977E3957A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB8DAAC-5479-4659-8303-10F7F138D067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB8DAAC-5479-4659-8303-10F7F138D067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB8DAAC-5479-4659-8303-10F7F138D067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB8DAAC-5479-4659-8303-10F7F138D067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
