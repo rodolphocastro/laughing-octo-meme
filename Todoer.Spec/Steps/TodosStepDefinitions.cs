@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Todoer.Api.Domain;
+// ReSharper disable ClassNeverInstantiated.Global
 
 namespace Todoer.Spec.Steps;
 
