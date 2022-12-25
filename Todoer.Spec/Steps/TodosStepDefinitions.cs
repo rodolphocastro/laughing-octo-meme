@@ -9,6 +9,7 @@ public class TodosContext
     public string CurrentTitle { get; set; } = string.Empty;
     public string CurrentContent { get; set; } = string.Empty;
     public Todo? CurrentTodo { get; set; }
+    public Exception? CurrentException { get; set; }
 }
 
 [Binding]
@@ -37,10 +38,17 @@ public class TodosStepDefinitions
     [When(@"new Todo item is created")]
     public void WhenNewTodoItemIsCreated()
     {
-        _context.CurrentTodo = new Todo(_context.CurrentTitle)
+        try
         {
-            Content = _context.CurrentContent
-        };
+            _context.CurrentTodo = new Todo(_context.CurrentTitle)
+            {
+                Content = _context.CurrentContent
+            };
+        }
+        catch (Exception e)
+        {
+            _context.CurrentException = e;
+        }
     }
 
     [Then(@"its title should read ""(.*)""")]
@@ -59,5 +67,17 @@ public class TodosStepDefinitions
     public void ThenItsTimestampShouldBeLessThanNow()
     {
         _context.CurrentTodo?.Timestamp.Should().BeBefore(DateTimeOffset.Now);
+    }
+
+    [Then(@"an ArgumentNullException should be thrown")]
+    public void ThenAnArgumentNullExceptionShouldBeThrown()
+    {
+        _context.CurrentException.Should().BeOfType<ArgumentNullException>();
+    }
+
+    [Then(@"it should be null")]
+    public void ThenItShouldBeNull()
+    {
+        _context.CurrentTodo.Should().BeNull();
     }
 }

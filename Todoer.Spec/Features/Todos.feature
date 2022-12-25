@@ -8,9 +8,15 @@ Creating and managing todos is core to this sample!
         Then its title should read "<title>"
         And its content should read "<content>"
         And its timestamp should be less than now
-        
-    Examples: 
-        | title        | content                    |
-        | amazingNotes | lorem ipsum dolor sit amet |
-        | -128391      | cowabunga                  |
-        | h4s numbers  |                            |
+
+        Examples:
+          | title        | content                    |
+          | amazingNotes | lorem ipsum dolor sit amet |
+          | -128391      | cowabunga                  |
+          | h4s numbers  |                            |
+
+    Scenario: A Todo must always contain a title
+        Given "" as a title
+        When new Todo item is created
+        Then an ArgumentNullException should be thrown
+        And it should be null
