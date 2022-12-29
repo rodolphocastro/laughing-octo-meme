@@ -27,4 +27,12 @@ public class ControllersTests : ArchitectureTests
             .AndShould().HaveAnyAttributesThat().Are(typeof(ApiControllerAttribute))
             .Check(_apiArchitecture);
     }
+
+    [Fact]
+    public void ControllersShouldNotBeDependedOnByOtherNamespaces()
+    {
+        Classes().That().AreNot(_controllerLayer)
+            .Should().NotDependOnAny(_controllerLayer)
+            .Check(_apiArchitecture);
+    }
 }
