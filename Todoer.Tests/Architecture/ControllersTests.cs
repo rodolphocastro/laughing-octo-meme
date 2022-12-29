@@ -35,4 +35,16 @@ public class ControllersTests : ArchitectureTests
             .Should().NotDependOnAny(_controllerLayer)
             .Check(_apiArchitecture);
     }
+
+    [Fact]
+    public void ControllersConstructorsShouldOnlyUseInterfacesOrThemselves()
+    {
+        MethodMembers().That()
+            .AreDeclaredIn(_controllerLayer)
+            .And().AreConstructors()
+            .And().ArePublic()
+            .Should().OnlyDependOnTypesThat().Are(_controllerLayer).As("should depend only on themselves")
+            .OrShould().OnlyDependOnTypesThat().Are(Interfaces()).As("should depend only on Interfaces")
+            .Check(_apiArchitecture);
+    }
 }
