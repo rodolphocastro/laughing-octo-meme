@@ -517,7 +517,8 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -802,3 +803,4 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/rider,jetbrains+all,monodevelop,csharp,dotnetcore,linux,windows,macos,visualstudio
+nohup.out
